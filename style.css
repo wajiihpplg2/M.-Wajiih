@@ -317,3 +317,35 @@ footer {
 .project-card:active::after {
     opacity: 1;
 }
+/* =====================
+   PAGE LOAD ANIMATION
+===================== */
+.page-load {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: pageFadeUp 1s ease forwards;
+}
+
+@keyframes pageFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: revealAnim 1s ease forwards;
+}
+
+.reveal:nth-of-type(1) { animation-delay: 0.2s; }
+.reveal:nth-of-type(2) { animation-delay: 0.4s; }
+.reveal:nth-of-type(3) { animation-delay: 0.6s; }
+.reveal:nth-of-type(4) { animation-delay: 0.8s; }
+
+@keyframes revealAnim {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
